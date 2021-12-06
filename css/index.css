@@ -1,0 +1,22 @@
+/* 标签选择器 */
+div{
+    background-color: aquamarine;
+}
+/* 类选择器 字母开头 可以搭配数字 - _ß */
+.cL_0-p{
+    background-color: pink;
+    height: 200px;
+}
+/* id选择器  */
+#hgy__pp{
+    background-color: #fff;
+    height: 200px;
+    color: #89aacc;
+    line-height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: right;
+
+    margin-top: 300px;
+    padding: 40px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/select.css">
+</head>
+
+<body>
+    <h1>选择器</h1>
+    <div class="main box_center">
+        <div class="select_main">
+            <div class="res_box">
+                <p id="res_ipt">请选择</p>
+                <span class="icon">
+                    <img class="img100" src="./images/Arrow@2x.png" alt="">
+                </span>
+            </div>
+            <div class="option_list">
+                <ul>
+                    <li class="li">请选择</li>
+                    <li class="li">螺丝粉</li>
+                    <li class="li">老友粉</li>
+                    <li class="li">桂林米粉</li>
+                    <li class="li">螺狮鸭脚煲</li>
+                    <li class="li">牛杂煲</li>
+                    <li class="li">炸鸡</li>
+                    <li class="li">烧烤</li>
+                    <li class="li">豆浆、油条</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 补充一个简单的js
+        // 获取 显示框的元素
+        var res_ipt = document.getElementById('res_ipt')
+        // 获取所有符合.li这个类名的元素 是一个类数组，其实可以先理解为数组
+        var _liArr = document.querySelectorAll('.li')
+        // 遍历这个元素数组 给每一个元素添加点击事件
+        _liArr.forEach((item) => {
+            item.onclick = function () {
+                var text = item.textContent
+                setIpt(text)
+            }
+        })
+        // 设置res_ipt 内容的函数方法
+        function setIpt(text) {
+            res_ipt.innerHTML = text
+        }
+    </script>
+</body>
+
+</html>

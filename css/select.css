@@ -1,0 +1,127 @@
+h1 {
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+}
+
+/* 这是一种最常用的元素居中手段 */
+.box_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img100 {
+    width: 100%;
+}
+
+.main {
+    width: 800px;
+    height: 500px;
+    background-color: #000;
+}
+
+.select_main {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+}
+
+.select_main .res_box {
+    font-size: 14px;
+    color: #fff;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.res_box .icon {
+    width: 20px;
+    height: 20px;
+    /* 鼠标离开框框时，执行的动画 */
+    transition: all .2s linear;
+}
+
+/* 鼠标悬停在框框的效果 */
+.select_main:hover .res_box {
+    border-color: #1989fa;
+    cursor: pointer;
+}
+
+.select_main:hover .option_list {
+    display: block;
+    animation: listShow .5s linear;
+}
+
+/* 鼠标悬停在框框 icon的效果 */
+.select_main:hover .res_box .icon {
+    transform: rotate(180deg);
+    transition: all .5s linear;
+}
+
+.select_main .option_list {
+    box-sizing: border-box;
+    margin-top: 10px;
+    border: 1px solid #f2f2f2;
+    width: 210px;
+    max-height: 100px;
+    border-radius: 4px;
+    padding: 5px 10px;
+    overflow: scroll;
+    display: none;
+    animation: listHide .5s linear;
+}
+
+.select_main .option_list ul li {
+    font-size: 14px;
+    color: #fff;
+    line-height: 30px;
+    padding-left: 5px;
+
+}
+
+.select_main .option_list ul li:hover {
+    background: #7eb6ee;
+    color: rgb(245, 37, 71);
+
+}
+
+@keyframes listShow {
+    from {
+        height: 0px;
+        opacity: 0;
+    }
+
+    to {
+        height: 210px;
+        opacity: 1;
+    }
+}
+
+/* 这个相关的应该是没用的  因为display:none; 直接隐藏了。需要配合js使用才行 */
+@keyframes listHide {
+    from {
+        height: 210px;
+        opacity: 0;
+    }
+
+    to {
+        height: 0px;
+        opacity: 1;
+    }
+}
+
+/* 留了一个思考题 (我自己解决掉了) */
+.res_box {
+    width: 210px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类/伪元素-wys</title>
+
+    <style>
+        .clear-fix {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+        }
+
+        /* 高度塌陷的问题 */
+        /* 之前 我们可以解释为 设置选取的这个元素的第一个元素 */
+        .clear-fix::before {
+            content: '';
+            width: 200px;
+            height: 40px;
+            background-color: plum;
+        }
+
+        /* 之后 */
+        .clear-fix::after {
+            content: '';
+        }
+
+        .ul li {
+            background-color: powderblue;
+            font-size: 20px;
+            float: left;
+            width: 100px;
+        }
+
+        .ul li:nth-child(2n) {
+            background-color: purple;
+            font-size: 40px;
+        }
+        /* .ul li:first-child{
+            font-size: 14px;
+        }
+        .ul li:last-child{
+            font-size: 14px;
+            color: #fff;
+        }
+        .ul li:nth-last-child(4) {
+            text-align: center;
+        } */
+
+        input:disabled {
+            color: red;
+        }
+        .ul:hover li{
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clear-fix">
+        <p>nihao </p>
+        <div>oooo</div>
+        <input type="text">
+    </div>
+
+    <div class="ul">
+        <h1>nihao </h1>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>0</li>
+        </ul>
+    </div>
+    <input type="text" disabled value="ddd">
+    <input type="checked"> 
+
+</body>
+
+</html>

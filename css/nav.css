@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+}
+
+/* 这是一种最常用的元素居中手段 */
+.box_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img100 {
+    width: 100%;
+}
+nav{
+    width: 100%;
+    min-height: 100px;
+    background-color: rgba(0,0,0);
+    margin-top: 30px;
+}

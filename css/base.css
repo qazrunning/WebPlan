@@ -44,11 +44,11 @@ input::-moz-focus-inner{border: 0; padding: 0;}
 /* 标题元素样式清除, 让标题都自定义, 适应多个系统应用 */
 h1,h2,h3,h4,h5,h6{font-size: 100%;font-weight: normal;}
 
-.clearfix {zoom:1}
+.clear {zoom:1}
 .clearfix:after {content: '\20'; display: block; clear: both;}
 .cursor{ cursor:pointer;}
 .pr{position:relative}/*相对定位*/
 .pa{position:absolute}/*绝对定位*/
 .fl{ float:left;}/*左浮动*/
 .fr{ float:right;}/*右浮动*/
-.fl,.fr{display:inline;}/*浮动后，此元素会被显示为内联元素，元素前后没有换行符*/
+/* .fl,.fr{display:inline;}浮动后，此元素会被显示为内联元素，元素前后没有换行符 */

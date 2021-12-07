@@ -1,0 +1,70 @@
+h1 {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 48px;
+    text-align: center;
+}
+
+p {
+    line-height: 36px;
+    font-size: 18px;
+}
+.color_red{
+    color: red;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.example {
+    width: 100%;
+
+}
+
+.example1 {
+    background-color: powderblue;
+    margin-bottom: 20px;
+}
+
+.example .fl {
+    width: 100px;
+    height: 50px;
+    background-color: aqua;
+}
+
+.example .fr {
+    width: 100px;
+    height: 50px;
+    background-color: blueviolet;
+}
+
+.example2 {
+    border: 2px solid #333;
+    background-color: rgb(200, 96, 221);
+}
+
+/* 我们先给ul的li设置一下公共样式 */
+/* 在这里我们可以设置li的宽度为300px 看看float布局在父元素宽度不够的情况下 怎么排列*/
+.ul li {
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    color: #333;
+    text-align: center;
+    line-height: 30px;
+    /* 接下来我们就设置 浮动float */
+    float: left;
+}
+.txt_center{
+    text-align: center;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动-float</title>
+    <link href="./css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/float.css">
+</head>
+
+<body>
+    <h1>浮动</h1>
+    <p>首先我们浮动就三种情况，元素左浮动，元素右浮动。还有不浮动。</p>
+    <p>我们先看看下面的浮动例子</p>
+    <p>我们可以看到，设置了左浮动的元素是从左边开始排列的，而设置了右浮动的元素会从右边开始排列；</p>
+    <p>为了更好的的理解，我们把例子一的位置调换一下.我们可以看到，设置了浮动的元素，和你编写代码时的位置无关</p>
+    <p>我们看例子三，当多个字元素设置了相同的浮动属性。那么就会按照位置依次排列。</p>
+    <div class="example example1 clearfix">
+        <h2>例子一</h2>
+        <div class="fl">
+            左浮动
+        </div>
+        <div class="center">
+            参考点（无浮动）
+        </div>
+        <div class="fr">
+            右浮动
+        </div>
+    </div>
+
+    <div class="example2 example">
+        <h2>例子二</h2>
+        <div class="fr">
+            右浮动
+        </div>
+        <div class="center">
+            参考点（无浮动）
+        </div>
+        <div class="fl">
+            左浮动
+        </div>
+    </div>
+
+
+    <h2 style="padding-top: 50px;">例子3</h2>
+    <p>我们可以看到设置了，左浮动元素就会从右开始按顺序排列。自己试一试right的右浮动</p>
+    <p>一般当我们设定了元素浮动，那个就可以把这个元素当成是行内块元素，他会在一行内按顺序排列。知道这一行排不下，才会排到下一行</p>
+    <ul class="ul clearfix">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>0</li>
+    </ul>
+
+    <p>
+        在上面的例子中，我们可以发现，我们给例子2的最外层的那个‘example2’元素设置了边框。
+        但是这个边框并没有把我们的所有子元素全部包裹起来。但是例子1和例子3没有。因为我进行了 <b>清除浮动</b> 的设置
+    </p>
+    <p class='color_red'>这是浮动元素的一个缺点，当我们的元素设置了浮动之后，
+        我们的浏览器不会把这个浮动元素的高度计算到我们父元素的高度当中。这就是我们说的
+        <b>高度塌陷</b>。产生高度塌陷的元素，是不好看的。也不符合我们的排列逻辑。
+    </p>
+    <p>
+        所以，我们针对你想用浮动，但是又想要正常的排列的情况。我们有一个叫<b>清除浮动</b>的方法
+        首先，我们给浮动元素的父元素设置<b>zoom:1</b> 然后给父元素添加一个after伪元素，
+        这样子，浏览器在计算元素高度的时候，会以最后一个子元素为参考。可以正常计算高度
+    </p>
+
+    <p>在实际的开发当中，浮动现在用得很少。因为我们有更好的替代方案，就是flex布局。所以基本是看一下老代码的时候才会发现有这种用法
+        做一个了解即可。后面看面试题的时候。还会有相关题目的讲解。所以，下面的总结一定要结合案例进行理解
+    </p>
+
+    <article>
+        <p class="txt_center"> 总结</p>
+        浮动就是，让元素按从左到右或从右到左的排列属性。他不会改变设定好的元素宽度。但是会造成高度塌陷。
+        解决高度塌陷的方式参考 './css/base.css' 中的clear这个属性。‘.clearfix:after’中的‘clear’是清除元素浮动的意思。可以百度看看
+    </article>
+</body>
+
+</html>

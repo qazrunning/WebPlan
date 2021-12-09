@@ -4,44 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flex布局案列</title>
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/flex.css">
+    <title>选择器的权重</title>
 </head>
 <body>
-    <h1>flex布局</h1>
-    <p class="txt_center">下面我会针对每个属性写一些案列。你可以修改对应的class里面的相关属性感受一下。</p>
-    <p class="txt_center"> 如果就打算用默认的属性。可以直接不写那条声明</p>
-    <main>
-        <h2>主轴方向，决定元素的排列方式</h2>
-        <p>默认值是 row，其他值看文档</p>
-        <div class="flex-box flex1">
-            <div class="item">1</div>
-            <div class="item">2</div>
-            <div class="item">3</div>
-            <div class="item">4</div>
-            <div class="item">5</div>
-            <div class="item">6</div>
-            <div class="item">7</div>
-            <div class="item">8</div>
-            <div class="item">9</div>
-            <div class="item">0</div>
-        </div>
+    <div>
+        <p>在我们的css中，我们的选择器有权重这一个的说法。看下面的例子</p>
+    </div>
 
-        <h2>是否换行</h2>
-        <p>默认值是 nowarp，其他值看文档,当我们设置不换行的时候，元素会为了排在一排而被缩减</p>
-        <div class="flex-box flex2">
-            <div class="item ">1</div>
-            <div class="item">2</div>
-            <div class="item">3</div>
-            <div class="item">4</div>
-            <div class="item">5</div>
-            <div class="item">6</div>
-            <div class="item">7</div>
-            <div class="item">8</div>
-            <div class="item">9</div>
-            <div class="item">0</div>
-        </div>
-    </main>
+    <h2>例子</h2>
+    <div class="main_class" id="mai_id">
+       <div class="class2">
+           <p>你在想什么？</p>
+           <div class="class3">
+               <p>不好</p>
+           </div>
+       </div>
+    </div>
 </body>
 </html>

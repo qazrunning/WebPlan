@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1639284696380') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-renminbi:before {
+  content: "\eb1e";
+}
+
+.icon-diqiu:before {
+  content: "\e6bc";
+}
+
+.icon-arrow-up-circle:before {
+  content: "\e665";
+}
+
+.icon-navigation:before {
+  content: "\e67a";
+}
+
+.icon-search:before {
+  content: "\e67d";
+}
+
+.icon-news-filling:before {
+  content: "\e68a";
+}
+

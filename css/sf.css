@@ -80,6 +80,7 @@ a{
 .nav2_list .nav2_item{
     width: 100%;
     line-height: 24px;
+    margin-bottom: 20px;
 }
 .nav2_list .nav2_item .a2{
     width: 100%;

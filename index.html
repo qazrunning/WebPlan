@@ -86,7 +86,106 @@
                 <li class="business_li"><a href="#"></a></li>
             </ul>
         </div>
+        <div class="section">
+            <div class="title">
+                物流服务介绍
+            </div>
+            <div class="tabs-ul">
+                <ul>
+                    <li></li>
+                    <li class="li-handel active-li" data-name="news_box1">
+                        <span>快递服务</span>
+                    </li>
+                    <li class="li-handel" data-name="news_box2"><span>快运服务</span> </li>
+                    <li class="li-handel"><span>冷运服务</span> </li>
+                    <li class="li-handel"><span>医药服务</span> </li>
+                    <li class="li-handel"><span>国际服务</span> </li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="news_box news_box1 active">
+                <div class="news_box_item">
+                    <div class="img">
+                        <img src="https://www.sf-express.com/.gallery/index/upgrade2020-08-27/delivery-service-3.png"
+                        alt="">
+                    </div>
+                    
+                    <div class="news_box_item_bottom">
+                        <div class="p1">
+                            顺丰特快
+                        </div>
+                        <div class="p2">
+                            斯大林法拉第了房间的手机发了睡觉啊费拉达斯家乐福
+                        </div>
+                        <span class="iconfont icon-navigation icon-span"></span>
+                    </div>
+                </div>
+                <div class="news_box_item">
+                    <div class="img">
+                        <img src="https://www.sf-express.com/.gallery/index/upgrade2020-08-27/delivery-service-3.png"
+                        alt="">
+                    </div>
+                    <div class="news_box_item_bottom">
+                        <div class="p1">
+                            顺丰特快
+                        </div>
+                        <div class="p2">
+                            斯大林法拉第了房间的手机发了睡觉啊费拉达斯家乐福
+                        </div>
+                        <span class="iconfont icon-navigation icon-span"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news_box2 news_box">
+                <div class="news_box_item">
+                    <img src="https://www.sf-express.com/.gallery/index/upgrade2020-08-27/delivery-service-2.png"
+                        alt="">
+                    <div class="news_box_item_bottom">
+                        <div class="p1">
+                            顺丰特快
+                        </div>
+                        <div class="p2">
+                            斯大林法拉第了房间的手机发了睡觉啊费拉达斯家乐福
+                        </div>
+                        <span class="iconfont icon-navigation icon-span"></span>
+                    </div>
+                </div>
+                <div class="news_box_item">
+                    <img src="https://www.sf-express.com/.gallery/index/upgrade2020-08-27/delivery-service-2.png"
+                        alt="">
+                    <div class="news_box_item_bottom">
+                        <div class="p1">
+                            顺丰特快
+                        </div>
+                        <div class="p2">
+                            斯大林法拉第了房间的手机发了睡觉啊费拉达斯家乐福
+                        </div>
+                        <span class="iconfont icon-navigation icon-span"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+    <script>
+        let li = document.querySelectorAll('.li-handel')
+        li.forEach((item) => {
+            item.onclick = function () {
+                let active_name = item.dataset.name
+                let news_box = document.querySelectorAll('.news_box');
+                for(let i = 0;i<news_box.length;i++){
+                    let item  = news_box[i]
+                    item.classList.remove('active')
+                }
+                li.forEach((liitem)=>{
+                    liitem.classList.remove('active-li')
+                })
+                item.classList.add('active-li')
+                document.getElementsByClassName(active_name)[0].classList.add('active')
+            }
+        })
+    </script>
 </body>
 
 </html>

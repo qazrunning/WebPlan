@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1639284696380') format('truetype');
+  src: url('iconfont.ttf?t=1640496911104') format('truetype');
 }
 
 .iconfont {
@@ -15,6 +15,14 @@
   content: "\eb1e";
 }
 
+.icon-aixin:before {
+  content: "\e8ab";
+}
+
+.icon-shibai:before {
+  content: "\e8b8";
+}
+
 .icon-diqiu:before {
   content: "\e6bc";
 }
@@ -23,12 +31,48 @@
   content: "\e665";
 }
 
+.icon-arrow-right-circle:before {
+  content: "\e666";
+}
+
+.icon-arrow-right:before {
+  content: "\e667";
+}
+
+.icon-arrow-double-left:before {
+  content: "\e668";
+}
+
+.icon-arrow-left-circle:before {
+  content: "\e669";
+}
+
+.icon-arrow-double-right:before {
+  content: "\e66a";
+}
+
+.icon-direction-right:before {
+  content: "\e66c";
+}
+
+.icon-direction-left:before {
+  content: "\e66d";
+}
+
 .icon-navigation:before {
   content: "\e67a";
 }
 
 .icon-search:before {
   content: "\e67d";
+}
+
+.icon-arrow-left-bold:before {
+  content: "\e685";
+}
+
+.icon-arrow-right-bold:before {
+  content: "\e687";
 }
 
 .icon-news-filling:before {

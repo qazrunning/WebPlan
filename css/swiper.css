@@ -1,0 +1,68 @@
+#swiper{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.swiper_main{
+    width: 100%;
+}
+.swiper_img_list{
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+.swiper_img_list img{
+    width: 100%;
+}
+.arrow_btn{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    z-index: 2;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(87,243,214,0.5);
+    cursor: pointer;
+    margin: 0 10px;
+}
+.arrow_btn:hover{
+    background-color: rgba(87,243,214);
+}
+.arrow_btn span{
+    font-size:32px;
+    color: #ccc;
+}
+.arrow_btn:hover span{
+    color: #000;
+}
+.prev_btn{
+    left: 0;
+}
+.next_btn{
+    right: 0;
+}
+
+.dot_list{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%,0);
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+}
+.dot_item{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(87,243,214,0.5);
+    margin: 0 5px;
+    border-radius: 50%;
+}
+.dot_item:hover{
+    background-color: pink;
+}
+.dot_item.active{
+    background-color: pink;
+}

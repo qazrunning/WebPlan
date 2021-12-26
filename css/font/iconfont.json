@@ -13,6 +13,20 @@
       "unicode_decimal": 60190
     },
     {
+      "icon_id": "11372639",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "e8ab",
+      "unicode_decimal": 59563
+    },
+    {
+      "icon_id": "11372698",
+      "name": "失败",
+      "font_class": "shibai",
+      "unicode": "e8b8",
+      "unicode_decimal": 59576
+    },
+    {
       "icon_id": "15644320",
       "name": "地球",
       "font_class": "diqiu",
@@ -27,6 +41,55 @@
       "unicode_decimal": 58981
     },
     {
+      "icon_id": "15838428",
+      "name": "arrow-right-circle",
+      "font_class": "arrow-right-circle",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "15838431",
+      "name": "arrow-right",
+      "font_class": "arrow-right",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "15838436",
+      "name": "arrow-double-left",
+      "font_class": "arrow-double-left",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "15838437",
+      "name": "arrow-left-circle",
+      "font_class": "arrow-left-circle",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "15838438",
+      "name": "arrow-double-right",
+      "font_class": "arrow-double-right",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "15838460",
+      "name": "direction-right",
+      "font_class": "direction-right",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "15838463",
+      "name": "direction-left",
+      "font_class": "direction-left",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
       "icon_id": "15838515",
       "name": "navigation",
       "font_class": "navigation",
@@ -39,6 +102,20 @@
       "font_class": "search",
       "unicode": "e67d",
       "unicode_decimal": 59005
+    },
+    {
+      "icon_id": "15838561",
+      "name": "arrow-left-bold",
+      "font_class": "arrow-left-bold",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "15838566",
+      "name": "arrow-right-bold",
+      "font_class": "arrow-right-bold",
+      "unicode": "e687",
+      "unicode_decimal": 59015
     },
     {
       "icon_id": "15838599",

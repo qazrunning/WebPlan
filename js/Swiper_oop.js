@@ -10,7 +10,6 @@
         this.autoplay = data && data.autoplay || 2000
         this.changeTime = data && data.changeTime || 500
     }
-
     // 初始化
     Swiper.prototype.init = function () {
         // dom
@@ -80,7 +79,6 @@
     }
     // 从左往右移动
     Swiper.prototype.leftToRight = function () {
-        console.log(this._index)
         if (!this.lock) return
         this._index = Number(this._index) + 1
         this.swiperMove()

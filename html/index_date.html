@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let today = new Date()//返回一个特殊的Date对象
+        // 返回 是几几年
+        let _getFullYear = today.getFullYear()
+        // 返回月份 0-11 0是一月
+        let _getMonth = today.getMonth()
+        // 获取当天的日期 返回今天是这个月的第几天12月27号  返回27
+        let _getDate = today.getDate()
+        // 返回今天是这周的第几天 0-6 0是周日 6是周六
+        let _getDay = today.getDay()
+        // 返回时间对象 的小时  0-24
+        let _getHours = today.getHours()
+        // 返回分钟
+        let _getMinutes = today.getMinutes()
+        // 返回秒
+        let _getSeconds = today.getSeconds()
+        // 返回一个毫秒数
+        let _now = Date.now()
+        // 基本最常用的获取就这些了 后面补充一个万年历的插件
+    </script>
+</body>
+</html>

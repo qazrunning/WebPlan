@@ -70,11 +70,15 @@
     Swiper.prototype.swiperMove = function () {
         this.list.style.left = this._index * this.sw + 'px'
         this.list.style.transition = `all ${this.changeTime / 1000}s ease`;
-
     }
-    // 还原
+    // 还原至第一张
     Swiper.prototype.swiperReduction = function () {
         this.list.style.left = 0;
+        this.list.style.transition = "none";
+    }
+    // 还原至最后一张
+    Swiper.prototype.swiperReductionLast = function () {
+        this.list.style.left = this._len * this.sw + 'px'
         this.list.style.transition = "none";
     }
     // 从左往右移动
@@ -96,9 +100,10 @@
         this._index = Number(this._index) - 1
         if (this._index === -1) {
             // 要移动多少？
-            this.swiperReduction()
-            this._index = _len - 1
+            this.swiperReductionLast()
+            this._index = this._len - 1
             setTimeout(() => {
+                // 后退的动画不友好，补充一下
                 this.swiperMove()
             }, 0)
         } else {

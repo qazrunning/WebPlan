@@ -1,0 +1,56 @@
+#swiper{
+    width: 400px;
+    position: relative;
+    margin: 0 auto;
+}
+.swiper_main{
+    width: 100%; 
+    border: 5px solid #58bc58;
+}
+.swiper_img_list{
+    display: flex;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.swiper_img_list img{
+    width: 100%;
+}
+.arrow_btn{ 
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    font-size: 20px;
+    color: #333;
+    background-color: aqua;
+    cursor: pointer;
+    
+}
+.prev_btn{
+    left: 10px;
+}
+.next_btn{
+    right: 10px;
+}
+.dot_list{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%,0);
+    cursor: pointer;
+}
+.dot_item{
+    width: 25px;
+    height: 25px;
+    border-radius:50%;
+    background-color: rgba(87,243,214,0.5);
+    margin: 0 5px;
+}
+.dot_item:hover{
+    background-color:pink
+}
+.dot_item.active{
+    background-color:pink
+}

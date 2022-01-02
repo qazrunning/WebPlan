@@ -8,11 +8,10 @@
     <title>swiper</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css//font/iconfont.css">
-    <link rel="stylesheet" href="./css/swiper1.css">
+    <link rel="stylesheet" href="./css/swiper.css">
 </head>
 
 <body>
-
     <div id="swiper">
         <div class="swiper_main">
             <div class="swiper_img_list">
@@ -24,20 +23,19 @@
             </div>
         </div>
         <div class="arrow_btn prev_btn">
-            <span>上</span>
+            <span class="iconfont icon-arrow-left-bold"></span>
         </div>
         <div class="arrow_btn next_btn">
-            <span>下</span>
+            <span class="iconfont icon-arrow-right-bold"></span>
         </div>
-        <div class="dot_list">
-            <div class="dot_item active"></div>
-            <div class="dot_item"></div>
-            <div class="dot_item"></div>
-            <div class="dot_item"></div>
-            <div class="dot_item"></div>
-        </div>
+        <!-- <ul class="dot_list">
+        </ul> -->
     </div>
-    <script src="./js/swiper1.js"></script>
+    <script src="./js/Swiper_oop.js"></script>
+    <script>
+        let swipers = new Swiper()
+        swipers.init()
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 0104 test
+        // 首先我们先定义我们可以克隆的数据类型
+        const argsTag = '[object Arguments]'
+        const arrayTag = '[object Array]'
+        const boolTag = '[object Boolean]'
+        const dateTag = '[object Date]'
+        const errorTag = '[object Error]'
+        const mapTag = '[object Map]'
+        const numberTag = '[object Number]'
+        const objectTag = '[object Object]'
+        const regexpTag = '[object RegExp]'
+        const setTag = '[object Set]'
+        const stringTag = '[object String]'
+        const symbolTag = '[object Symbol]'
+        const weakMapTag = '[object WeakMap]'
+        // 特殊的类型参数
+        const arrayBufferTag = '[object ArrayBuffer]'
+        const dataViewTag = '[object DataView]'
+        const float32Tag = '[object Float32Array]'
+        const float64Tag = '[object Float64Array]'
+        const int8Tag = '[object Int8Array]'
+        const int16Tag = '[object Int16Array]'
+        const int32Tag = '[object Int32Array]'
+        const uint8Tag = '[object Uint8Array]'
+        const uint8ClampedTag = '[object Uint8ClampedArray]'
+        const uint16Tag = '[object Uint16Array]'
+        const uint32Tag = '[object Uint32Array]'
+        // 我们把这个tag存入一个对象中，并标明那些可以直接clone 那些不可以克隆
+        const cloneableTags = {}
+        cloneableTags[argsTag] = cloneableTags[arrayTag] =
+            cloneableTags[arrayBufferTag] = cloneableTags[dataViewTag] =
+            cloneableTags[boolTag] = cloneableTags[dateTag] =
+            cloneableTags[float32Tag] = cloneableTags[float64Tag] =
+            cloneableTags[int8Tag] = cloneableTags[int16Tag] =
+            cloneableTags[int32Tag] = cloneableTags[mapTag] =
+            cloneableTags[numberTag] = cloneableTags[objectTag] =
+            cloneableTags[regexpTag] = cloneableTags[setTag] =
+            cloneableTags[stringTag] = cloneableTags[symbolTag] =
+            cloneableTags[uint8Tag] = cloneableTags[uint8ClampedTag] =
+            cloneableTags[uint16Tag] = cloneableTags[uint32Tag] = true
+        cloneableTags[errorTag] = cloneableTags[weakMapTag] = false
+        // 判断是否是对象
+        function baseClone(value) {
+            let result
+            // 如果result 不全等 undefined 直接返 这里做的判断result是否真的为空
+            if (result !== undefined) {
+                return result
+            }
+            // 如果传入的值是不是对象 那么直接返回
+            if(!isObject(value)){
+                return result
+            }
+            // 用来判断是不是数组
+            const isArr = Array.isArray(value)
+            // 用来判读是什么数据类型
+            const tag = getTag(value)
+
+        }
+        // 判断是否是对象 :Boolean true是 false不是
+        function isObject(value){
+            let type = typeof value
+            return value != null && (type === 'object' || type === 'function')
+        }
+        // 用来获取toString 的类型 用来判断数据类型 返回[object Undefined] 这样子的字符串
+        function getTag(value){
+            if(value == null){
+                return value === undefined ? '[object Undefined]' : '[object Null]'
+            }
+            return toString.call(value)
+        }
+        // 0104 暂停一下吧 思路被打乱了
+    </script>
+</body>
+
+</html>

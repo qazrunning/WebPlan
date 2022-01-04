@@ -5,50 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>swiper</title>
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css//font/iconfont.css">
-    <link rel="stylesheet" href="./css/swiper1.css">
+    <title>Document</title>
 </head>
 
 <body>
+    <script>
+        // 原型
+        // 对象上都有__proto__属性
+        // 函数上有一个属性 prototype  是一个对象   ->我们成为原型对象
 
-    <div id="swiper">
-        <div class="swiper_main">
-            <div class="swiper_img_list">
-                <img src="https://s1.ax1x.com/2020/09/26/0irm1P.jpg" />
-                <img src="https://s1.ax1x.com/2020/09/26/0irQ0g.jpg" />
-                <img src="https://s1.ax1x.com/2020/09/26/0ir8ts.jpg" />
-                <img src="https://s1.ax1x.com/2020/10/11/0gbKoV.jpg" />
-                <img src="https://s1.ax1x.com/2020/10/11/0gb7Os.jpg" />
-            </div>
-            <div class="dot_list">
-                <div class="dot_item" data-cur="0">
-                    <img src="https://s1.ax1x.com/2020/09/26/0irm1P.jpg" />
-                </div>
-                <div class="dot_item" data-cur="1">
-                    <img  src="https://s1.ax1x.com/2020/09/26/0irQ0g.jpg" />
-                </div>
-                <div class="dot_item" data-cur="2">
-                    <img  src="https://s1.ax1x.com/2020/09/26/0ir8ts.jpg" />
-                </div>
-                <div class="dot_item" data-cur="3">
-                    <img  src="https://s1.ax1x.com/2020/10/11/0gbKoV.jpg" />
-                </div>
-                <div class="dot_item" data-cur="4">
-                    <img  src="https://s1.ax1x.com/2020/10/11/0gb7Os.jpg" />
-                </div>
-            </div>
-        </div>
-        <!-- <div class="arrow_btn prev_btn">
-            <span>上</span>
-        </div>
-        <div class="arrow_btn next_btn">
-            <span>下</span>
-        </div> -->
+        function Proto() {} //原型对象 具体实例
+        Proto.prototype.name = '你好'
+        // new 关键字使 Proto()成为构造函数  这种称为构造函数
+        let obj = new Proto() //生成一个对象 我们一般称为实例化对象  也加实例
+        // 这个实例化函数上有一个属性 prototype  是一个对象   ->我们成为原型对象
+        // 原型对象上有一个 __proto__ 
+        Object.prototype.__proto__ //null
+        Function.prototype.__proto__ //Object.prototype
+        Object.__proto__ //Function.prototype
 
-    </div>
-    <script src="./js/swiper1.js"></script>
+        console.log(obj)
+    </script>
 </body>
 
 </html>

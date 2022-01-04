@@ -1,56 +1,41 @@
 #swiper{
-    width: 400px;
+    width: 1046px;
     position: relative;
     margin: 0 auto;
+    overflow: hidden;
 }
 .swiper_main{
-    width: 100%; 
-    border: 5px solid #58bc58;
+    width: 100%;
 }
 .swiper_img_list{
     display: flex;
     position: relative;
-    transition: all 0.5s ease;
 }
 .swiper_img_list img{
-    width: 100%;
+    width: 860px;
 }
-.arrow_btn{ 
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    position: absolute;
-    top: 45%;
-    font-size: 20px;
-    color: #333;
-    background-color: aqua;
-    cursor: pointer;
-    
-}
-.prev_btn{
-    left: 10px;
-}
-.next_btn{
-    right: 10px;
-}
+
 .dot_list{
     display: flex;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%,0);
+    flex-direction: column;
     cursor: pointer;
+    width: 185px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
 }
 .dot_item{
-    width: 25px;
-    height: 25px;
-    border-radius:50%;
-    background-color: rgba(87,243,214,0.5);
-    margin: 0 5px;
+    width: 185px;
 }
 .dot_item:hover{
-    background-color:pink
+    box-sizing: border-box;
+    border:1px solid pink;
 }
 .dot_item.active{
-    background-color:pink
+    box-sizing: border-box;
+    border:1px solid pink;
+}
+.dot_item img{
+    width: 100%;
 }

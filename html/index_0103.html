@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 预解析
+        /*
+            预处理：创建一个词法环境。扫描js中用声明的方式声明的函数，以及用var定义的变量并将他们加到预处理阶段的语法环境里面去
+            预解析：就是在js文件或者script里面的代码在正式开始执行之前，进行的一些解析工作。这个过程很简单，就是在全局中寻找var关键字声明的变量和通过function关键字声明的函数
+            在js执行之前进行的解析
+        */
+        //作用域
+        /**
+         * 全局作用域 函数作用域
+         *在全局任何一个地方都可以用到的 就是全局作用域
+         * 块级作用域
+         */
+        //全局变量和局部变量同名时，全局变量的作用域 不包含 局部变量的作用域   全局变量不在做用与局部变量NaN
+
+        //正则再来一次
+        //    reg.test(str):boolean
+        let reg1 = /foo$/ //字面量
+        let reg2 = new RegExp('foo$') //构造函数
+        //  \b+ 匹配一个单词边界 （单词无边界 两边要没有东西） \B 模糊匹配
+        //  /d 匹配数字  \D 非数字
+        // \w 匹配字母/数字/下划线  \W 匹配非字母/数字/下划线
+        // ^以什么开头  $ 以什么为结尾
+        // []  匹配里面的其中一个
+        // [^] 不匹配里面的任何一个
+        //  + 表示前一模式（前一内容） 可以被重复一次或多次
+        // * 表示前一内容  可以重复0次或者多次
+        //  ？ 表示前一内容 0次或者1次‘
+        // {x,y} 表示可以重复几次
+        // () 子表达式 反正就是表达式
+        //  ｜ 或
+        // \ 转译
+        //  
+        // 进阶01.03
+        /*
+            变量
+
+            堆：
+            
+            栈：变量存储的地方，函数栈(后进先出)
+                
+        */
+
+        const arr = [
+            {
+                title:'kauisdfs',
+                id:2334,
+            },
+            {
+                title:'kauisdfs',
+                id:2334,
+            },{
+                title:'kauisdfs',
+                id:2334,
+            },
+            {
+                title:'kauisdfs',
+                id:2334,
+            },{
+                title:'kauisdfs',
+                id:2334,
+            },
+            {
+                title:'kauisdfs',
+                id:2334,
+            },{
+                title:'kauisdfs',
+                id:2334,
+            },
+            {
+                title:'kauisdfs',
+                id:2334,
+            },{
+                title:'kauisdfs',
+                id:2334,
+            },
+            {
+                title:'kauisdfs',
+                id:2334,
+            },
+        ]
+        let htmlStr = ''
+        arr.forEach((item,index)=>{
+            htmlStr += `<div class="dot_item" data-cur="0">
+                ${item.title}
+                    <img src="https://s1.ax1x.com/2020/09/26/0irm1P.jpg" />
+                </div>`
+        })
+        document.querySelector('.dot_list').appendChild(htmlStr)
+    </script>
+</body>
+
+</html>

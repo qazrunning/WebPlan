@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 原型
+        // 对象上都有__proto__属性
+        // 函数上有一个属性 prototype  是一个对象   ->我们成为原型对象
+
+        function Proto() {} //原型对象 具体实例
+        Proto.prototype.name = '你好'
+        // new 关键字使 Proto()成为构造函数  这种称为构造函数
+        let obj = new Proto() //生成一个对象 我们一般称为实例化对象  也加实例
+        // 这个实例化函数上有一个属性 prototype  是一个对象   ->我们成为原型对象
+        // 原型对象上有一个 __proto__ 
+        Object.prototype.__proto__ //null
+        Function.prototype.__proto__ //Object.prototype
+        Object.__proto__ //Function.prototype
+
+        console.log(obj)
+    </script>
+</body>
+
+</html>

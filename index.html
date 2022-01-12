@@ -4,104 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>放大镜</title>
-  <link rel="stylesheet" href="./css/base.css">
-  <style>
-    .img-box{
-      width: 300px;
-      height: 300px;
-      overflow: hidden;
-      position: relative;
-    }
-    img{
-      width: 100%;
-      height: 100%;
-    }
-    .small-box{
-      width: 100px;
-      height: 100px;
-      background-color: rgba(255, 255, 255, 0.5);
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-    .big-box{
-      width: 300px;
-      height: 300px;
-      border: 1px solid #000;
-      position: relative;
-      margin-top: 50px;
-      overflow: hidden;
-    }
-    .scale3{
-      position: absolute;
-      left: 0;
-      top: 0;
-      transform: scale(3);
-      /* 变化的起始点 */
-      transform-origin: 0 0 0 ;
-    }
-  </style>
+  <title>Document</title>
 </head>
 <body>
-
-  <div class="img-box">
-    <img src="./images/aj1_kousui.jpeg" alt="">
-    <div class="small-box"></div>
-  </div>
-  <div class="big-box">
-    <img src="./images/aj1_kousui.jpeg" class="scale3" alt="">
-  </div>
-  <script>
-    // 开始进入配置时代
-    // 放大镜
-    console.log("放大镜")
-    /*
-      思路： offsetWidth width 放大几倍？
-      clientx clientY
-      计算边界
-      判断可移动范围 把其固定住 但是
-      要形成比例
-      我是大概懂了
-    */
-    // 获取元素
-    let img_box = document.querySelector(".img-box")
-    let samll_box = document.querySelector('.small-box')
-    let big_box = document.querySelector(".big-box")
-    let scale3 = document.querySelector(".scale3")
-    
-    // 监听鼠标移入事件
-    img_box.onmousemove = function(event){
-      
-      let clientX = event.clientX
-      let clientY = event.clientY
-      // 鼠标移入后的位置
-      let left = clientX - samll_box.offsetWidth / 2
-      let top = clientY - samll_box.offsetHeight / 2
-      if(left < 0){
-        left = 0
-      }else if(left > 200){
-        left = 200
-      }
-      if(top < 0){
-        top = 0
-      }else if(top > 200){
-        top = 200
-      }
-      
-      moveSmall(left,top)
-      
-    }
-
-    function moveSmall(left,top){
-      samll_box.style.left = left + 'px';
-      samll_box.style.top = top + 'px';
-
-      scale3.style.left = -(left * 3) + 'px'
-      scale3.style.top = -(top * 3) + 'px'
-    }
-    // 后面增加自定义的 位置
-  </script>
+  
+  <script type="module" src="./js/data.js"></script>
 </body>
 </html>

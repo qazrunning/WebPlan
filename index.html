@@ -1,13 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <style>
+    
+    .min-box {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .samll-box {
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    .big-box {
+      margin-top: 30px;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scale {
+      transform: scale(3);
+      transform-origin: 0 0 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  </style>
 </head>
+
 <body>
-  
-  <script type="module" src="./js/data.js"></script>
+  <div class="min-box">
+    <img src="./images/aj1_zijige.jpeg" alt="">
+    <div class="samll-box"></div>
+  </div>
+
+  <div class="big-box">
+    <img src="./images/aj1_zijige.jpeg" class="scale" alt="">
+  </div>
+  <script>
+    console.log("放大镜")
+
+    let min_box = document.querySelector('.min-box')
+    let small = document.querySelector('.samll-box')
+    let scale = document.querySelector('.scale')
+
+    min_box.onmousemove = function (event) {
+
+      // console.log(e)
+      let x = event.clientX
+      let y = event.clientY
+      console.log(x,y)
+      let movex = x - small.offsetWidth / 2
+      let movey = y - small.offsetHeight / 2
+
+      if (movex < 0) {
+        movex = 0
+      } else if (movex > 200) {
+        movex = 200
+      }
+
+      if (movey < 0) {
+        movey = 0
+      } else if (movey > 200) {
+        movey = 200
+      }
+      small.style.left = movex + 'px'
+      small.style.top = movey + 'px'
+
+      scale.style.left = -(movex * 3) + 'px'
+      scale.style.top = -(movey * 3) + 'px'
+
+
+    }
+
+
+    function Scale(n){
+      this.n = n
+    }
+    // 初始化 用来定义函数
+    Scale.prototype.init = function(){
+      this.min_box = document.querySelector('.min-box')
+    }
+    Scale.prototype.bindMousemove = function(){
+      // 执行绑定 函数的方法
+      console.log(this.min_box)
+    }
+    // 移动的方法
+    Scale.prototype.move = function(x,y){
+
+    }
+    Scale.prototype.fangda = function(){
+      // n this.n
+    }
+
+
+
+    let scale = new Scale()
+    //  代表放大几倍
+    scale(3)
+  </script>
 </body>
+
 </html>

@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>放大镜</title>
+  <!-- 引入基础样式表，清除标签默认样式 -->
   <link rel="stylesheet" href="./css/base.css">
   <style>
     .img-box{
@@ -38,8 +39,9 @@
       position: absolute;
       left: 0;
       top: 0;
-      /* 变化的起始点 */
+      /* 设置变化的起始点 和我们下面设置的scale 挂钩 */
       transform-origin: 0 0 0 ;
+      /* transform:scale(3) */
     }
   </style>
 </head>
@@ -47,8 +49,11 @@
 
   <div class="img-box">
     <img src="./images/aj1_kousui.jpeg" alt="">
+    <!-- 这是我们移动的小盒子 小盒子的宽高比例 要和big-box的相同-->
     <div class="small-box"></div>
   </div>
+
+  <!-- 放大镜的放大后的视图 -->
   <div class="big-box">
     <img src="./images/aj1_kousui.jpeg" class="scale3" alt="">
   </div>
@@ -70,19 +75,24 @@
     let samll_box = document.querySelector('.small-box')
     let big_box = document.querySelector(".big-box")
     let scale3 = document.querySelector(".scale3")
-    let scaleNum = 4
     // 放大几倍
+    let scaleNum = 4
     scale(scaleNum)
     // 监听鼠标移入事件
     img_box.onmousemove = function(event){
-      
+      // 过去鼠标在这个元素移动到那个地方
       let clientX = event.clientX
       let clientY = event.clientY
       // 鼠标移入后的位置 -->samll_box.offsetWidth / 2
+      // 这里为什么要减去  透明小盒子的宽高的一半，是为了让鼠标出现在透明小盒子的中间 。你可以去掉 然后观察鼠标在小盒子的位置
+      /*
+      let left = clientX
+      let top = clientY
+      */
       let left = clientX - samll_box.offsetWidth / 2
       let top = clientY - samll_box.offsetHeight / 2
 
-      // 200 是容器减去 滑块的长高的剩余
+      // 200 是img-box容器减去 透明小盒子的长高的剩余 就是鼠标可以在img-box中移动的范围
       if(left < 0){
         left = 0
       }else if(left > 200){
@@ -98,6 +108,7 @@
       
     }
 
+    // 移动透明小盒子  和放大视图的图片
     function moveSmall(left,top){
       samll_box.style.left = left + 'px';
       samll_box.style.top = top + 'px';
@@ -105,7 +116,9 @@
       scale3.style.left = -(left * scaleNum) + 'px'
       scale3.style.top = -(top * scaleNum) + 'px'
     }
+    // 自定义放大倍数
     function scale(n){
+      // 这里用了 css中的transform属性中的 scale 来进行图片放大
       scale3.style.transform = `scale(${n})`
     }
     // 后面增加自定义的 位置

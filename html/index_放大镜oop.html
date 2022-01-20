@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <style>
+    .min-box {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .samll-box {
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      /* 抖动解决 */
+      pointer-events: none;
+    }
+
+    .big-box {
+      margin-top: 30px;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scale {
+      transform-origin: 0 0 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">
+    <!-- <div class="min-box">
+      <img src="./images/aj1_zijige.jpeg" class="img-s" alt="">
+      <div class="samll-box"></div>
+    </div>
+    <div class="big-box">
+      <img src="./images/aj1_zijige.jpeg" class="scale img-s" alt="">
+    </div> -->
+  </div>
+  <div class="box2">
+    <!-- <div class="min-box">
+      <img src="./images/aj1_zijige.jpeg" class="img-s" alt="">
+      <div class="samll-box"></div>
+    </div>
+    <div class="big-box">
+      <img src="./images/aj1_zijige.jpeg" class="scale img-s" alt="">
+    </div> -->
+  </div>
+  <script>
+    /**
+     * 可自定义放大的倍数
+     * 自定义图片
+     */
+    function Scale(n, nodeStr, src) {
+      this.n = n
+      this.nodeStr = nodeStr
+      this.src = src
+      // new的时候就创建元素 并进行添加
+      this.addNode()
+    }
+    // 初始化 用来定义变/执行函数
+    Scale.prototype.init = function () {
+      this.x = 0
+      this.y = 0
+      this.min_box = document.querySelector(`${this.nodeStr} .min-box`)
+      this.small = document.querySelector(`${this.nodeStr} .samll-box`)
+      this.scale = document.querySelector(`${this.nodeStr} .scale`)
+      this.fangda()
+      this.bindMousemove()
+    }
+    Scale.prototype.bindMousemove = function () {
+      // 保证this指向Scale这个原型对象
+      let _that = this
+      // 执行绑定 函数的方法
+      this.min_box.onmousemove = function (event) {
+        _that.x = (event.offsetX) //event.clientX
+        _that.y = (event.offsetY)
+        // console.log(_that.x,_that.y)
+        let movex = _that.x - _that.small.offsetWidth / 2
+        let movey = _that.y - _that.small.offsetHeight / 2
+        if (movex < 0) {
+          movex = 0
+        } else if (movex > 200) {
+          movex = 200
+        }
+        if (movey < 0) {
+          movey = 0
+        } else if (movey > 200) {
+          movey = 200
+        }
+        _that.move(movex, movey)
+      }
+    }
+    // 移动的方法
+    Scale.prototype.move = function (x, y) {
+      this.small.style.left = x + 'px'
+      this.small.style.top = y + 'px'
+      this.scale.style.left = -(x * this.n) + 'px'
+      this.scale.style.top = -(y * this.n) + 'px'
+    }
+    Scale.prototype.fangda = function () {
+      // 最少要放大3倍
+      this.scale.style.transform = `scale(${this.n})`
+    }
+    // 更换图片
+    Scale.prototype.setImg = function (src) {
+      this.src = src
+      document.querySelectorAll(`${this.nodeStr} .img-s`).forEach((item) => {
+        item.src = src
+      })
+    }
+    // 创建元素
+    Scale.prototype.addNode = function () {
+      let str = `
+      <div class="min-box">
+      <img src=${this.src} class="img-s" alt="">
+      <div class="samll-box"></div>
+    </div>
+    <div class="big-box">
+      <img src=${this.src} class="scale img-s" alt="">
+    </div>`
+      document.querySelector(this.nodeStr).innerHTML = str
+    }
+    let scale1 = new Scale(3, '.box1', "./images/aj1_zijige.jpeg")
+    scale1.init()
+    let scale2 = new Scale(4, '.box2', "./images/aj1_kousui.jpeg")
+    scale2.init()
+  </script>
+</body>
+
+</html>

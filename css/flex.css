@@ -80,3 +80,18 @@ main{
     height: 100%;
     background-color: #000;
 }
+
+.p{
+    /* 给swiper设置的 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* 自身x,y轴往回移动自己宽高的50% */
+    transform: translate(-50%,-50%);
+}
+body{
+    /* #swiper父元素设置的 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

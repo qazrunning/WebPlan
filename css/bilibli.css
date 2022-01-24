@@ -1,0 +1,240 @@
+a {
+  text-decoration: none;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+.flex-all-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-w-100{
+  width: 100%;
+}
+.head {
+  width: 100%;
+  min-height: 155px;
+  position: relative;
+}
+
+.head-bg-img {
+  width: 100%;
+  height: 155px;
+  background-color: #951f05;
+}
+
+.head-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  /* background-color: aqua; */
+  box-sizing: border-box;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head-nav-left ul,.head-nav-right-box2 ul {
+  display: flex;
+  align-items: center;
+}
+
+.head-nav-left-li {
+  margin-right: 12px;
+}
+
+.head-nav-left-li a {
+  font-size: 14px;
+  color: #fff;
+
+}
+
+.head-logo {
+  margin-right: 6px;
+  font-size: 18px;
+}
+
+.head-app {
+  margin-right: 0;
+}
+
+.head-nav-center {
+  width: 450px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 2px;
+  position: relative;
+}
+
+.search-ipt {
+  width: 430px;
+  height: 36px;
+  box-sizing: border-box;
+  border: 0;
+  padding-left: 10px;
+}
+.search-btn {
+  width: 48px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  background: #e7e7e7;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-btn .search-icon{
+  font-size: 18px;
+  font-weight: 600;
+}
+.search-btn .search-icon:hover{
+  color: #73c9e5;
+}
+.head-nav-right-box1{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 12px;
+}
+.head-nav-right-box1 img{
+  width: 40px;
+  height: 40px;
+}
+.head-nav-right{
+  display: flex;
+  align-items: center;
+}
+.contribution-btn{
+  width: 100px;
+  height: 36px;
+  background-color: #fb7299;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 36px;
+  cursor: pointer;
+}
+/* 全站nav */
+.nav{
+  width: 100%;
+  height: 108px;
+}
+.nav-main{
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.nav-main-left ul{
+  display: flex;
+  align-items: center;
+}
+.nav-main-left{
+  height: 108px;
+  display: flex;
+  align-items: center;
+}
+.nav-main-left-li{
+  margin-right: 16px;
+}
+.nav-main-left-li a{
+  font-size: 14px;
+  color: #212121;
+  text-align: center;
+  display: inline-block;
+}
+.a-icon-box{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+.a-icon-box-f57{
+  background-color: #ff5c7c;
+}
+.a-icon-box-f76{
+  background-color: #ff716d;
+}
+.a-icon-box-6c8{
+  background-color: #6dc781;
+}
+.nav-main-line{
+  height: 46px;
+  border-right: 1px solid #e7e7e7 ;
+}
+.nav-main-center{
+  width: 730px;
+  height: 68px;
+}
+.nav-main-center ul{
+  width: 100%;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav-main-center-li .a-hover-box{
+  display: none;
+  width: 100px;
+  height: 100px;
+  background-color: #f3f;
+}
+.nav-main-center-li .a-title{
+  width:90px;
+  height: 34px;
+  font-size: 14px;
+  color: #212121;
+  display: flex;
+  align-items: center;
+}
+.nav-main-center-li .a-title .a-title-span{
+  /* font: 14px -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif; */
+  display: inline-block;
+  width: 32px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #73c9e5;
+  border-radius: 2px;
+  margin-left: 1px;
+  line-height: 14px;
+  text-align: center;
+}
+.nav-main-center-li a:hover .a-hover-box{
+  display: block;
+}
+.nav-main-center-li a:hover .a-title{
+  color: #73c9e5;
+}
+.nav-main-center-li a{
+  position: relative;
+  display: block;
+}
+.nav-main-center-li:nth-child(-n+8) a .a-hover-box{
+  position: absolute;
+  bottom:36px ;
+  left: -10px;
+}
+.nav-main-center-li:nth-child(n+9) a .a-hover-box{
+  position: absolute;
+  top:36px ;
+  left: -10px;
+}
+/* .nav-main-center-li:nth-child(1-8) a .a-hover-box */

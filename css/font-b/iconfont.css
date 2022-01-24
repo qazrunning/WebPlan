@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1640921369229') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zizhutuiguang:before {
+  content: "\f0104";
+}
+
+.icon-yingyong:before {
+  content: "\f0174";
+}
+
+.icon-xinlangweibo:before {
+  content: "\f01af";
+}
+
+.icon-home:before {
+  content: "\e6b8";
+}
+
+.icon-xiaoxi:before {
+  content: "\f02ee";
+}
+
+.icon-dengpaotishi:before {
+  content: "\e622";
+}
+
+.icon-huore:before {
+  content: "\f01f3";
+}
+
+.icon-weixin:before {
+  content: "\e632";
+}
+
+.icon-shijian:before {
+  content: "\e64d";
+}
+
+.icon-huo:before {
+  content: "\e66c";
+}
+
+.icon-shouji:before {
+  content: "\e692";
+}
+
+.icon-act004:before {
+  content: "\e608";
+}
+
+.icon-sousuo:before {
+  content: "\e86e";
+}
+
+.icon-fenquweixuanzhong:before {
+  content: "\e661";
+}
+
+.icon-wodedahuiyuan:before {
+  content: "\e6c3";
+}
+
+.icon-zhibo:before {
+  content: "\e6d9";
+}
+
+.icon-bofang:before {
+  content: "\e624";
+}
+
+.icon-kefu:before {
+  content: "\e625";
+}
+
+.icon-jiantoushang:before {
+  content: "\e62c";
+}
+
+.icon-jiantoushang1:before {
+  content: "\e62d";
+}
+
+.icon-jiantouyou:before {
+  content: "\e62e";
+}
+
+.icon-jiantouxia:before {
+  content: "\e62f";
+}
+
+.icon-fenquguanli:before {
+  content: "\e629";
+}
+
+.icon-dianshi:before {
+  content: "\e609";
+}
+
+.icon-weibiaoti--:before {
+  content: "\e612";
+}
+
+.icon-24gl-playSquare:before {
+  content: "\ea72";
+}
+
+.icon-dianzan:before {
+  content: "\e8ad";
+}
+
+.icon-shoucang:before {
+  content: "\e8b9";
+}
+
+.icon-weixin1:before {
+  content: "\e8bb";
+}
+
+.icon-dianzan1:before {
+  content: "\e8c3";
+}
+
+.icon-gongyi:before {
+  content: "\e60a";
+}
+
+.icon-xiazai:before {
+  content: "\e638";
+}
+
+.icon-bilibili-line:before {
+  content: "\e66d";
+}
+
+.icon-a-dianshitaidianshipindao:before {
+  content: "\e6a6";
+}
+

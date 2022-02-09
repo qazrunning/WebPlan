@@ -294,7 +294,8 @@ a {
   border-radius: 2px;
   background-color: #6dc781;
 }
-.wrap-rcmd{
+
+.wrap-rcmd {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -302,13 +303,15 @@ a {
   height: 242px;
   width: 638px;
 }
+
 .rcmd-box {
   position: relative;
   width: 206px;
   height: 116px;
   background-color: #fb7299;
 }
-.wrap-change-btn{
+
+.wrap-change-btn {
   position: absolute;
   height: 77px;
   width: 28px;
@@ -316,33 +319,41 @@ a {
   right: -36px;
   top: 20px;
 }
-.wrap-left{
+
+.wrap-left {
   width: 854px;
 
 }
-.wrap-left-title{
+
+.wrap-left-title {
   width: 100%;
   height: 36px;
   margin-bottom: 16px;
   background-color: #212121;
+  color: #fff;
+  text-align: center;
 }
-.wrap-right{
+
+.wrap-right {
   width: 320px;
   height: 244px;
   background-color: #6dc781;
 }
-.wrap-left-list{
+
+.wrap-left-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-.wrap-left-list-box{
+
+.wrap-left-list-box {
   width: 206px;
   height: 192px;
   background-color: #951f05;
 }
-.advertisement{
+
+.advertisement {
   width: 1200px;
   height: 134px;
   margin: 0 auto;
@@ -351,4 +362,150 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.bili-main {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bili-main-left {
+  width: 854px;
+  height: 456px;
+  background-color: #f2f2f2;
+}
+
+.bili-main-left .bili-main-left-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bili-title-left {
+  display: flex;
+  align-items: center;
+}
+
+.bili-title-left-icon {
+  font-size: 36px;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.icon-zhibo {
+  color: #48cfe5;
+}
+
+.bili-title-left-txt {
+  font-size: 20px;
+  margin: 0 20px 0 6px;
+  line-height: 36px;
+}
+
+.bili-title-left p {
+  color: #505050;
+}
+
+.bili-main-right {
+  width: 320px;
+  background-color: #fff;
+}
+
+.change-btn,
+.more-btn {
+  width: 72px;
+  height: 22px;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid silver;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #505050;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.change-btn:hover .bili-change-btn-icon {
+  transform: rotate(-360deg);
+
+  transition: all .5s;
+}
+
+.bili-change-btn-icon {
+  display: inline-block;
+  font-size: 14px;
+  transform: rotate(0);
+  margin-right: 6px;
+  transition: all .2s;
+  /* 设置旋转中心位置  起点是left top 左上角 */
+  transform-origin: center center;
+}
+
+.bili-more-btn-icon {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.bili-title-right {
+  display: flex;
+  align-items: center;
+}
+
+.more-btn {
+  width: 60px;
+  margin-left: 10px;
+}
+
+.bili-main-left-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 404px;
+}
+
+.bili-main-left-list .list-box {
+  width: 206px;
+  height: 190px;
+  background-color: #fb55a1;
+}
+
+.bili-live-tabs {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.bili-live-tabs-li {
+  font-size: 12px;
+  line-height: 18px;
+  height: 22px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.bili-live-tabs-li.active{
+    color: #73c9e5;
+    position: relative;
+}
+.bili-live-tabs-li.active::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #48cfe5;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+.bili-live-switch{
+  width: 100%;
+  height: 374px;
+  background-color: #48cfe5;
+  display: none;
 }

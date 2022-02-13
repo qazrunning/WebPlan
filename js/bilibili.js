@@ -129,3 +129,22 @@ bili_live_tabs_li.forEach((item)=>{
     bili_live_tabs_li[bili_live_tabs_index].classList.add('active')
   }
 })
+
+// 鼠标悬停 北京变化
+let rcmd_box_a_list = document.querySelectorAll('.rcmd-box-a')
+rcmd_box_a_list.forEach((item)=>{
+  let rcmd_box_info = item.querySelector('.rcmd-box-info')
+  let rcmd_box_info_tit = item.querySelector('.rcmd-box-info-tit')
+  // 鼠标移入 删除rcmd-box-info-nostyle 删除ellipsis1  添加ellipsis2
+  item.onmouseover = function(e){
+    rcmd_box_info.classList.remove('rcmd-box-info-nostyle')
+    rcmd_box_info_tit.classList.remove('ellipsis1')
+    rcmd_box_info_tit.classList.add('ellipsis2')
+  }
+  // 鼠标移出 和移入相反
+  item.onmouseout = function(e){
+    rcmd_box_info.classList.add('rcmd-box-info-nostyle')
+    rcmd_box_info_tit.classList.add('ellipsis1')
+    rcmd_box_info_tit.classList.remove('ellipsis2')
+  }
+})

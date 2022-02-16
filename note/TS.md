@@ -44,3 +44,6 @@ console.log(sex['那']) //4
 }
 ```
 
+## class
+
+​	private私有的

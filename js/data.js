@@ -66,61 +66,50 @@ const dataNav = Mock.mock([{
     }]
   },
 ])
-const fuwuList = Mock.mock([
-  {
-    name:'快递服务',
-    'list|2':[
-      {
-        'id|1000-9999':1000,
-        imgUrl:Mock.Random.image('600x214', 'Hello Mock.js!'),
-        'title':'@ctitle(4,6)',
-        'content':'@cparagraph(1, 3)'
-      }
-    ]
+const fuwuList = Mock.mock([{
+    name: '快递服务',
+    'list|2': [{
+      'id|1000-9999': 1000,
+      imgUrl: Mock.Random.image('600x214', 'Hello Mock.js!'),
+      'title': '@ctitle(4,6)',
+      'content': '@cparagraph(1, 3)'
+    }]
   },
   {
-    name:'快运服务',
-    'list|2':[
-      {
-        'id|1000-9999':1000,
-        imgUrl:Mock.Random.dataImage('600x214', 'Hello Mock.js!'),
-        'title':'@ctitle(4,6)',
-        'content':'@cparagraph(1, 3)'
-      }
-    ]
+    name: '快运服务',
+    'list|2': [{
+      'id|1000-9999': 1000,
+      imgUrl: Mock.Random.dataImage('600x214', 'Hello Mock.js!'),
+      'title': '@ctitle(4,6)',
+      'content': '@cparagraph(1, 3)'
+    }]
   },
   {
-    name:'冷运服务',
-    'list|2':[
-      {
-        'id|1000-9999':1000,
-        imgUrl:Mock.Random.dataImage('600x214', 'Hello Mock.js!'),
-        'title':'@ctitle(4,6)',
-        'content':'@cparagraph(1, 3)'
-      }
-    ]
+    name: '冷运服务',
+    'list|2': [{
+      'id|1000-9999': 1000,
+      imgUrl: Mock.Random.dataImage('600x214', 'Hello Mock.js!'),
+      'title': '@ctitle(4,6)',
+      'content': '@cparagraph(1, 3)'
+    }]
   },
   {
-    name:'医药服务',
-    'list|2':[
-      {
-        'id|1000-9999':1000,
-        imgUrl:Mock.Random.dataImage('600x214', 'Hello Mock.js!'),
-        'title':'@ctitle(4,6)',
-        'content':'@cparagraph(1, 3)'
-      }
-    ]
+    name: '医药服务',
+    'list|2': [{
+      'id|1000-9999': 1000,
+      imgUrl: Mock.Random.dataImage('600x214', 'Hello Mock.js!'),
+      'title': '@ctitle(4,6)',
+      'content': '@cparagraph(1, 3)'
+    }]
   },
   {
-    name:'国际服务',
-    'list|2':[
-      {
-        'id|1000-9999':1000,
-        imgUrl:Mock.Random.dataImage('600x214', 'Hello Mock.js!'),
-        'title':'@ctitle(4,6)',
-        'content':'@cparagraph(1, 3)'
-      }
-    ]
+    name: '国际服务',
+    'list|2': [{
+      'id|1000-9999': 1000,
+      imgUrl: Mock.Random.dataImage('600x214', 'Hello Mock.js!'),
+      'title': '@ctitle(4,6)',
+      'content': '@cparagraph(1, 3)'
+    }]
   }
 ])
 
@@ -153,38 +142,48 @@ const Random = Mock.Random
  * cname : 中文姓名
  */
 const mockTest = Mock.mock({
-  id1:Random.id(),
-  id2:'@id',
-  id3:'@id()',
-  guid:Random.guid(),
-  boolean:'@boolean(1,9,false)',//=> 有(1/1+9)的概率出现false ，即max越大 出现true的概率越大
-  natural:'@natural(100,900)',//取一个100-900之间的自然数
-  string:'@string(20,30)',
-  range:'@range(1,100,10)', //返回1-100之间 从1开始间隔为10的所有数字的 数组
-  date:'@date(T)', //时间戳
-  image:Random.image('600x400',Random.color(),Random.color(),Random.string(3,5)), //生成一张 600x400大小，背景颜色随机，文字颜色随机，文字随机的图片
-  paragraph:'@paragraph(4,10)',
-  cparagraph:Random.cparagraph(),
-  csentence:'@csentence(2,5)',
-  ctitle:'@ctitle',
-  first:'@first',
-  cname:'@cname',
-  cfirst:'@cfirst',
-  clast:"@clast"
+  id1: Random.id(),
+  id2: '@id',
+  id3: '@id()',
+  guid: Random.guid(),
+  boolean: '@boolean(1,9,false)', //=> 有(1/1+9)的概率出现false ，即max越大 出现true的概率越大
+  natural: '@natural(100,900)', //取一个100-900之间的自然数
+  string: '@string(20,30)',
+  range: '@range(1,100,10)', //返回1-100之间 从1开始间隔为10的所有数字的 数组
+  date: '@date(T)', //时间戳
+  image: Random.image('600x400', Random.color(), Random.color(), Random.string(3, 5)), //生成一张 600x400大小，背景颜色随机，文字颜色随机，文字随机的图片
+  paragraph: '@paragraph(4,10)',
+  cparagraph: Random.cparagraph(),
+  csentence: '@csentence(2,5)',
+  ctitle: '@ctitle',
+  first: '@first',
+  cname: '@cname',
+  cfirst: '@cfirst',
+  clast: "@clast"
 })
 
 
 // Mock 还有一个拓展功能  可以让我们根据自己的需求 添加上对应的拓展 例如手机号
 Random.extend({
   // 手机号码
-  phone:function(){
+  phone: function () {
     let phonePrePool = `1${Random.cword('348',1)}${Mock.mock(/\d{9}/)}`
     return Number(phonePrePool)
   },
-  qqemail:function(){
+  qqemail: function () {
     return `${Mock.mock(/\d{8,10}/)}@qq.com`
   },
 })
 let t = Random.qqemail()
 // 输出结果
-console.log(t)
+
+
+export const wwe = Mock.mock({
+  "data|10-30": [{
+    "id|1000-3099": 1000,
+    "pid|10-30": 10,
+    name:'@cname',
+    nums:'@natural(0,1500)',
+    imgssa:'@image'
+  }]
+})

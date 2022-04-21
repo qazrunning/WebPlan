@@ -1,0 +1,36 @@
+#app{
+  font-size: .6933rem;
+}
+.answer-main,.question-main{
+  width: 100%;
+  padding: 0 16px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.answer-cell-item,.question-cell-item{
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.item{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#app .question-main{
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+#app .question-cell-item{
+  margin-bottom: 10px;
+}
+.question-cell-item .item{
+  background-color: blueviolet;
+}

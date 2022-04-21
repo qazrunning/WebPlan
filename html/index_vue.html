@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <div class="text">
+    <div>
+      <p v-for list []>
+
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="./js/vue2.js"></script>
+
+  <script>
+    // 我们的data
+    function data() {
+      return {
+        list: '5555',
+        number: 0
+      }
+    };
+    // 响应式
+    const _data = data()
+    // 遍历对象 不能用for...in... 直接遍历对象，有bug 所以提取key来遍历
+    const keys = Object.keys(_data)
+    for (let i = 0; i < keys.length; i++) {
+      let key = keys[i]
+      let value = _data[key]
+
+      // 添加响应式
+      Object.defineProperty(_data, key, {
+        get() {
+          console.log("我被使用了，所以我要收集（依赖）哪些地方用了我～")
+          return value
+        },
+        set(newVal) {
+          console.log(`${key}:我被设置了：${newVal}，所以我要把用到我依赖进行遍历更新视图啦～～`)
+        }
+      })
+    }
+    // list被使用了，get触发
+    document.querySelector('.text').innerHTML = _data.list
+    // list 被修改了set被触发
+    _data.list = "8996sdfsdfs"
+    // 这里我不考路直接操作_data问题。理论上是不允许直接操作_data的 这句话你可以当作没有
+  </script>
+  </script>
+</body>
+
+</html>

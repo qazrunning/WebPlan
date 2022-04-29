@@ -34,3 +34,8 @@
 .question-cell-item .item{
   background-color: blueviolet;
 }
+.cc{
+  width: 1px;
+  background-color: #000;
+  transform: scale(0.5);
+}

@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <!-- <script defer></script> -->
   <div id="app">
     <div class="answer-main">
       <div class="answer-cell-item">
@@ -31,8 +32,46 @@
     <div class="question-main">
     </div>
   </div>
-
+  <!-- <iframe style="height: 100vh;width: 100vw;" src="https://www.baidu.com/" frameborder="0"></iframe> -->
   <script src="./js/tuozhuai.js"></script>
+
+  <script>
+    // Object.defineProperty(window,'a',{
+    //   get(val){
+    //     return '1'
+    //   }
+    // })
+
+    // if (a === '1' && a === '2' && a === "3") {
+    //   console.log(999)
+    // }
+
+    // function dsss(){
+    //   var a = 'dfdd'
+    // }
+    //dsss()
+    // dsss.call(this,a,b,c,d)
+    // dsss.apply(this,[a,b,c,d])
+    // // 不立即执行 就相当于新建了一个函数
+    // dsss.bind(this,a,b,c,d)()
+    let odg = {}
+    let ppp = Object.assign({})
+    console.log(ppp)
+    data = [
+      {
+        label:'姓名',
+        type:'text',
+      },
+      {
+        label:'到访日期',
+        type:'date'
+      },
+      {
+        label:'备注',
+        type:'textare'
+      }
+    ]
+  </script>
 </body>
 
 </html>

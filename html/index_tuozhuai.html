@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>原生 拖拽、回弹、吸附</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/tuozhuai.css">
+  <script src="./js/rem.js"></script>
+</head>
+
+<body>
+  <!-- <script defer></script> -->
+  <div id="app">
+    <div class="answer-main">
+      <div class="answer-cell-item">
+        <div class="item"></div>
+      </div>
+      <div class="answer-cell-item">
+        <div class="item"></div>
+      </div>
+      <div class="answer-cell-item">
+        <div class="item"></div>
+      </div>
+      <div class="answer-cell-item">
+        <div class="item"></div>
+      </div>
+    </div>
+
+    <div class="question-main">
+    </div>
+  </div>
+  <!-- <iframe style="height: 100vh;width: 100vw;" src="https://www.baidu.com/" frameborder="0"></iframe> -->
+  <script src="./js/tuozhuai.js"></script>
+
+  <script>
+    // Object.defineProperty(window,'a',{
+    //   get(val){
+    //     return '1'
+    //   }
+    // })
+
+    // if (a === '1' && a === '2' && a === "3") {
+    //   console.log(999)
+    // }
+
+    // function dsss(){
+    //   var a = 'dfdd'
+    // }
+    //dsss()
+    // dsss.call(this,a,b,c,d)
+    // dsss.apply(this,[a,b,c,d])
+    // // 不立即执行 就相当于新建了一个函数
+    // dsss.bind(this,a,b,c,d)()
+    let odg = {}
+    let ppp = Object.assign({})
+    console.log(ppp)
+    data = [{
+        label: '姓名',
+        type: 'text',
+      },
+      {
+        label: '到访日期',
+        type: 'date'
+      },
+      {
+        label: '备注',
+        type: 'textare'
+      }
+    ]
+
+
+    /**
+     * string
+     * number
+     * boolean
+     * null
+     * undefined
+     * symbol
+     * 
+     * 
+     * Object
+     * todo 都是Object的延伸
+     * Array
+     * Date 日期
+     * Function  ->void return返回空
+     * ...
+     * 
+     * any
+     * 
+     * 
+     * 
+     * 
+     */
+
+    var arr = [23, 1, 14, 5, 67, 34, 85, 3, 45]
+
+    function maoPao(_arr) {
+
+      let temp = null
+      for (let i = 0; i <= _arr.lenght; i++) {
+        console.log(i)
+        for (let j = 0; j < _arr.lenght - i; j++) {
+          if (_arr[j] > _arr[j + 1]) {
+            temp = _arr[j + 1]
+            _arr[j + 1] = _arr[j]
+            _arr[j] = temp
+          }
+        }
+      }
+      console.log(_arr)
+      return _arr
+    }
+
+    console.log(maoPao(arr))
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/base.css">
+  <title>Document</title>
+  <style>
+    .btn {
+      background-color: #58bc58;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>from</h1>
+  <form action="#" method="post">
+    <div>
+      <label for="name">姓名：</label>
+      <input type="text" placeholder="请输入" required pattern="ddd">
+    </div>
+    <h1>---</h1>
+    <div>
+      <label for="name">选择框：</label>
+      <select id="card" name="usercard">
+        <option value="visa">Visa</option>
+        <option value="mc">Mastercard</option>
+        <option value="amex">American Express</option>
+      </select>
+    </div>
+    <h1>---</h1>
+    <div>
+      <label for="danxuan">单选：</label>
+      <input type="radio" name="danxuan" value="yes" id="yes"><label for="yes">是</label>
+      <input type="radio" name="danxuan" value="no" id="no"><label for="no">否</label>
+    </div>
+    <h1>---</h1>
+    <div>
+      <label for="checkbox">多选：</label>
+      <input type="checkbox" name="checkbox" value="0" id="checkbox0"><label for="yes">是</label>
+      <input type="checkbox" name="checkbox" value="1" id="checkbox1"><label for="no">多选1</label>
+      <input type="checkbox" name="checkbox" value="2" id="checkbox2"><label for="no">多选2</label>
+      <input type="checkbox" name="checkbox" value="3" id="checkbox3"><label for="no">多选3</label>
+    </div>
+
+    <button class="btn" type="submit">提交</button>
+  </form>
+
+
+  <form>
+    <p>
+      <fieldset>
+        <legend>Title<abbr title="This field is mandatory">*</abbr></legend>
+        <input type="radio" required name="title" id="r1" value="Mr"><label for="r1">Mr.</label>
+        <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Ms.</label>
+      </fieldset>
+    </p>
+    <p>
+      <label for="n1">How old are you?</label>
+      <!-- 这里的 pattern 属性可以用作不支持 number 类 input 浏览器的备用方法
+           请注意当与数字输入框一起使用时，支持 pattern 属性的浏览器会使它沉默失效。
+           它仅仅是在这里用作备用 -->
+      <input type="number" min="12" max="120" step="1" id="n1" name="age" pattern="\d+">
+    </p>
+    <p>
+      <label for="t1">What's your favorite fruit?<abbr title="This field is mandatory">*</abbr></label>
+      <input type="text" id="t1" name="fruit" list="l1" required
+        pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+      <datalist id="l1">
+        <option>Banana</option>
+        <option>Cherry</option>
+        <option>Apple</option>
+        <option>Strawberry</option>
+        <option>Lemon</option>
+        <option>Orange</option>
+      </datalist>
+    </p>
+    <p>
+      <label for="t2">What's your e-mail?</label>
+      <input type="email" id="t2" name="email">
+    </p>
+    <p>
+      <label for="t3">Leave a short message</label>
+      <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+    </p>
+    <p>
+      <button>Submit</button>
+    </p>
+  </form>
+</body>
+
+</html>

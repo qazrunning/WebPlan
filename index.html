@@ -5,72 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>原生 拖拽、回弹、吸附</title>
-  <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/tuozhuai.css">
-  <script src="./js/rem.js"></script>
+  <title>原型和原型链以及继承方式</title>
 </head>
 
 <body>
-  <!-- <script defer></script> -->
-  <div id="app">
-    <div class="answer-main">
-      <div class="answer-cell-item">
-        <div class="item"></div>
-      </div>
-      <div class="answer-cell-item">
-        <div class="item"></div>
-      </div>
-      <div class="answer-cell-item">
-        <div class="item"></div>
-      </div>
-      <div class="answer-cell-item">
-        <div class="item"></div>
-      </div>
-    </div>
 
-    <div class="question-main">
-    </div>
-  </div>
-  <!-- <iframe style="height: 100vh;width: 100vw;" src="https://www.baidu.com/" frameborder="0"></iframe> -->
-  <script src="./js/tuozhuai.js"></script>
-
+  <!-- <script src="./js/prototype.js"></script> -->
+  <!-- <script src="./js/0825.js"></script> -->
   <script>
-    // Object.defineProperty(window,'a',{
-    //   get(val){
-    //     return '1'
-    //   }
-    // })
-
-    // if (a === '1' && a === '2' && a === "3") {
-    //   console.log(999)
-    // }
-
-    // function dsss(){
-    //   var a = 'dfdd'
-    // }
-    //dsss()
-    // dsss.call(this,a,b,c,d)
-    // dsss.apply(this,[a,b,c,d])
-    // // 不立即执行 就相当于新建了一个函数
-    // dsss.bind(this,a,b,c,d)()
-    let odg = {}
-    let ppp = Object.assign({})
-    console.log(ppp)
-    data = [
-      {
-        label:'姓名',
-        type:'text',
-      },
-      {
-        label:'到访日期',
-        type:'date'
-      },
-      {
-        label:'备注',
-        type:'textare'
+    function getUrlParam(val) {
+      var query = window.location.search.substring(1);
+      var obj = query.split("&");
+      for (var i = 0; i < obj.length; i++) {
+        var arr = obj[i].split("=");
+        if (arr[0] == val) {
+          return arr[1];
+        }
       }
-    ]
+      return (false);
+    }
   </script>
 </body>
 
